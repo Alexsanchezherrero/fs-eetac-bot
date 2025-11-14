@@ -53,13 +53,10 @@ async def anuncio(interaction: discord.Interaction, titulo: str, contenido: str,
 async def mensaje(interaction: discord.Interaction, color: str, titulo: str, contenido: str):
     embed = build_announcement_embed(titulo, contenido, color, author=interaction.user)
     view = ConfirmView()
-    await interaction.response.send_message(content="Publicando mensaje...", ephemeral=True)
-    await interaction.channel.send(embed=embed, view=view)
-    try:
-        original = await interaction.original_response()
-        await original.delete()
-    except:
-        pass
+
+    # Enviar directamente el embed como respuesta
+    await interaction.response.send_message(embed=embed, view=view)
+
 
 @bot.tree.command(name="acta", description="Abre un formulario para crear un acta de reunión (modal).")
 @app_commands.describe(target_channel="Canal donde publicar el acta (opcional)")
