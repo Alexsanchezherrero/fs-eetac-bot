@@ -1,7 +1,7 @@
 {
-  "BOT_NAME": "FS_Bot",
-  "FOOTER": "Equipo Formula Student",
-  "BANNER_URL": "https://tu-servidor/tu-banner.png",
+  "BOT_NAME": "EETAC_RACING_BOT",
+  "FOOTER": "EETAC FS TEAM",
+  "BANNER_URL": "",
   "DEFAULT_COLOR": "azul",
   "VALID_COLORS": {
     "rojo": 15158332,
