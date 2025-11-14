@@ -1,0 +1,16 @@
+{
+  "BOT_NAME": "FS_Bot",
+  "FOOTER": "Equipo Formula Student",
+  "BANNER_URL": "https://tu-servidor/tu-banner.png",
+  "DEFAULT_COLOR": "azul",
+  "VALID_COLORS": {
+    "rojo": 15158332,
+    "verde": 3066993,
+    "azul": 3447003,
+    "amarillo": 16776960,
+    "gris": 8421504,
+    "negro": 0,
+    "blanco": 16777215,
+    "oro": 16766720
+  }
+}
