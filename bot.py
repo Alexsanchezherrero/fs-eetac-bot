@@ -52,9 +52,13 @@ async def anuncio(interaction: discord.Interaction, titulo: str, contenido: str,
 @app_commands.describe(color="color (rojo, verde, azul...)", titulo="Título", contenido="Contenido del mensaje")
 async def mensaje(interaction: discord.Interaction, color: str, titulo: str, contenido: str):
     embed = build_announcement_embed(titulo, contenido, color, author=interaction.user)
-    view = ConfirmView()
 
-    # Enviar directamente el embed como respuesta
+    # Solo usar la imagen si la URL es válida
+    banner = cfg.get("BANNER_URL")
+    if banner and banner.startswith("http"):
+        embed.set_image(url=banner)
+
+    view = ConfirmView()
     await interaction.response.send_message(embed=embed, view=view)
 
 
